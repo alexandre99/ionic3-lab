@@ -4,13 +4,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import { EscolhaPage } from '../pages/escolha/escolha'
+import { EscolhaPage } from '../pages/escolha/escolha';
+import { CadastroPage } from '../pages/cadastro/cadastro';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    EscolhaPage
+    EscolhaPage,
+    CadastroPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -19,7 +21,8 @@ import { EscolhaPage } from '../pages/escolha/escolha'
   entryComponents: [
     MyApp,
     HomePage,
-    EscolhaPage
+    EscolhaPage,
+    CadastroPage
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
 })
