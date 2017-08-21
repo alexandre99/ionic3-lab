@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 import { EscolhaPage } from '../pages/escolha/escolha';
 import { CadastroPage } from '../pages/cadastro/cadastro';
+import { AgendamentoService } from '../domain/agendamento/agendamento-service';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,9 @@ import { CadastroPage } from '../pages/cadastro/cadastro';
     EscolhaPage,
     CadastroPage
   ],
-  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
+  providers: [
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    AgendamentoService
+  ]
 })
 export class AppModule { }
